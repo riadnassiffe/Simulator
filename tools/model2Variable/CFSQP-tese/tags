@@ -1,0 +1,313 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+B1	problem.h	/^    double B1;$/;"	m	struct:problemData
+B2	problem.h	/^    double B2;$/;"	m	struct:problemData
+C	Makefile	/^C = gcc$/;"	m
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -O2$/;"	m
+CONSTR	cfsqp.c	59;"	d	file:
+C_f	qld.c	/^typedef VOID C_f;	\/* complex function *\/$/;"	t	file:
+C_fp	qld.c	/^typedef \/* Complex *\/ VOID (*C_fp)();$/;"	t	file:
+C_fp	qld.c	/^typedef \/* Complex *\/ VOID (*C_fp)(...);$/;"	t	file:
+Cef	problem.h	/^    double Cef;$/;"	m	struct:problemData
+DATAHANDLER_H_	dataHandler.h	10;"	d
+DEBUG_1	RobotControl.c	27;"	d	file:
+DMAX1	cfsqp.c	49;"	d	file:
+DMIN1	cfsqp.c	50;"	d	file:
+D_fp	qld.c	/^typedef doublereal (*D_fp)(), (*E_fp)();$/;"	t	file:
+D_fp	qld.c	/^typedef doublereal (*D_fp)(...), (*E_fp)(...);$/;"	t	file:
+E_f	qld.c	/^typedef doublereal E_f;	\/* real function with -R not specified *\/$/;"	t	file:
+E_fp	qld.c	/^typedef doublereal (*D_fp)(), (*E_fp)();$/;"	t	file:
+E_fp	qld.c	/^typedef doublereal (*D_fp)(...), (*E_fp)(...);$/;"	t	file:
+Extern	qld.c	146;"	d	file:
+F2C_INCLUDE	qld.c	129;"	d	file:
+F2C_proc_par_types	qld.c	276;"	d	file:
+FALSE	cfsqp.c	55;"	d	file:
+FALSE	cfsqpusr.h	19;"	d
+FALSE_	qld.c	142;"	d	file:
+Fmax	problem.h	/^    double Fmax;$/;"	m	struct:problemData
+Fmin	problem.h	/^    double Fmin[10];$/;"	m	struct:problemData
+H_f	qld.c	/^typedef VOID H_f;	\/* character function *\/$/;"	t	file:
+H_fp	qld.c	/^typedef \/* Character *\/ VOID (*H_fp)();$/;"	t	file:
+H_fp	qld.c	/^typedef \/* Character *\/ VOID (*H_fp)(...);$/;"	t	file:
+I_fp	qld.c	/^typedef integer (*I_fp)();$/;"	t	file:
+I_fp	qld.c	/^typedef integer (*I_fp)(...);$/;"	t	file:
+J_fp	qld.c	/^typedef shortint (*J_fp)();$/;"	t	file:
+J_fp	qld.c	/^typedef shortint (*J_fp)(...);$/;"	t	file:
+K_fp	qld.c	/^typedef shortlogical (*K_fp)();$/;"	t	file:
+K_fp	qld.c	/^typedef shortlogical (*K_fp)(...);$/;"	t	file:
+L_fp	qld.c	/^typedef logical (*L_fp)();$/;"	t	file:
+L_fp	qld.c	/^typedef logical (*L_fp)(...);$/;"	t	file:
+Long	qld.c	/^typedef long Long;$/;"	t	file:
+M	cfsqp.c	/^	 int nnineq, M, ncallg, ncallf, mode, modec;$/;"	m	struct:__anon10	file:
+Multitype	qld.c	/^typedef union Multitype Multitype;$/;"	t	typeref:union:Multitype	file:
+Multitype	qld.c	/^union Multitype {	\/* for multiple entry points *\/$/;"	u	file:
+MyIncludes	Makefile	/^MyIncludes= ~\/myIncludes\/$/;"	m
+MyLibs	Makefile	/^MyLibs = ~\/myLibs\/$/;"	m
+NONE	cfsqp.c	57;"	d	file:
+Namelist	qld.c	/^struct Namelist {$/;"	s	file:
+Namelist	qld.c	/^typedef struct Namelist Namelist;$/;"	t	typeref:struct:Namelist	file:
+OBJECT	cfsqp.c	58;"	d	file:
+PROBLEM_H_	problem.h	23;"	d
+Pi	problem.h	/^    double Pi[10];$/;"	m	struct:problemData
+QdMax	problem.h	/^    double QdMax[10];$/;"	m	struct:problemData
+QdMin	problem.h	/^    double QdMin[10];$/;"	m	struct:problemData
+Qi	problem.h	/^    double Qi[10];$/;"	m	struct:problemData
+RAN	Makefile	/^RAN = ranlib$/;"	m
+ROBOTCONTROL_H_	RobotControl.h	64;"	d
+R_fp	qld.c	/^typedef real (*R_fp)();$/;"	t	file:
+R_fp	qld.c	/^typedef real (*R_fp)(...);$/;"	t	file:
+S_fp	qld.c	/^typedef \/* Subroutine *\/ int (*S_fp)();$/;"	t	file:
+S_fp	qld.c	/^typedef \/* Subroutine *\/ int (*S_fp)(...);$/;"	t	file:
+T	problem.h	/^    double T[10];$/;"	m	struct:problemData
+TRUE	cfsqp.c	52;"	d	file:
+TRUE	cfsqpusr.h	18;"	d
+TRUE_	qld.c	141;"	d	file:
+U_fp	qld.c	/^typedef int \/* Unknown procedure type *\/ (*U_fp)();$/;"	t	file:
+U_fp	qld.c	/^typedef int \/* Unknown procedure type *\/ (*U_fp)(...);$/;"	t	file:
+VOID	qld.c	237;"	d	file:
+Vardesc	qld.c	/^struct Vardesc {	\/* for Namelist *\/$/;"	s	file:
+Vardesc	qld.c	/^typedef struct Vardesc Vardesc;$/;"	t	typeref:struct:Vardesc	file:
+Vmax	problem.h	/^    double Vmax;$/;"	m	struct:problemData
+W	problem.h	/^    double W[10];$/;"	m	struct:problemData
+XMLLIB	Makefile	/^XMLLIB=`xml2-config --cflags --libs`$/;"	m
+Z_f	qld.c	/^typedef VOID Z_f;	\/* double complex function *\/$/;"	t	file:
+Z_fp	qld.c	/^typedef \/* Double Complex *\/ VOID (*Z_fp)();$/;"	t	file:
+Z_fp	qld.c	/^typedef \/* Double Complex *\/ VOID (*Z_fp)(...);$/;"	t	file:
+_constraint	cfsqp.c	/^struct _constraint {$/;"	s	file:
+_objective	cfsqp.c	/^struct _objective {$/;"	s	file:
+_parameter	cfsqp.c	/^struct _parameter {$/;"	s	file:
+_violation	cfsqp.c	/^struct _violation {    \/* SIP      *\/$/;"	s	file:
+abs	qld.c	267;"	d	file:
+act_sip	cfsqp.c	/^	int act_sip;   \/* SIP      *\/$/;"	m	struct:_constraint	file:
+act_sip	cfsqp.c	/^	int act_sip;   \/* SIP      *\/$/;"	m	struct:_objective	file:
+addr	qld.c	/^	char *addr;$/;"	m	struct:Vardesc	file:
+address	qld.c	/^typedef char *address;$/;"	t	file:
+aerr	qld.c	/^{	flag aerr;$/;"	m	struct:__anon7	file:
+alist	qld.c	/^} alist;$/;"	t	typeref:struct:__anon7	file:
+aunit	qld.c	/^	ftnint aunit;$/;"	m	struct:__anon7	file:
+bgbnd	cfsqp.c	/^double 	bgbnd,tolfea;$/;"	v
+bl	cfsqp.c	/^	double *bl;$/;"	m	struct:_parameter	file:
+bu	cfsqp.c	/^	double *bu;$/;"	m	struct:_parameter	file:
+c	qld.c	/^	complex c;$/;"	m	union:Multitype	file:
+c__1	qld.c	/^static integer c__1 = 1;$/;"	v	file:
+cd	cfsqp.c	/^        void *cd;      \/* Client data pointer *\/$/;"	m	struct:_parameter	file:
+cerr	qld.c	/^{	flag cerr;$/;"	m	struct:__anon6	file:
+cfsqp	cfsqp.c	/^cfsqp(int nparam,int nf,int nfsr,int nineqn,int nineq,int neqn,$/;"	f
+cfsqp1	cfsqp.c	/^cfsqp1(int miter,int nparam,int nob,int nobL,int nfsip,int nineqn,$/;"	f	file:
+check	cfsqp.c	/^check(int nparam,int nf,int nfsip,int *Linfty,int nineq,$/;"	f	file:
+ciend	qld.c	/^	flag ciend;$/;"	m	struct:__anon3	file:
+cierr	qld.c	/^{	flag cierr;$/;"	m	struct:__anon3	file:
+cifmt	qld.c	/^	char *cifmt;$/;"	m	struct:__anon3	file:
+cilist	qld.c	/^} cilist;$/;"	t	typeref:struct:__anon3	file:
+cirec	qld.c	/^	ftnint cirec;$/;"	m	struct:__anon3	file:
+ciunit	qld.c	/^	ftnint ciunit;$/;"	m	struct:__anon3	file:
+cllist	qld.c	/^} cllist;$/;"	t	typeref:struct:__anon6	file:
+cmache_	qld.c	/^} cmache_;$/;"	v	typeref:struct:__anon9
+cmache_1	qld.c	340;"	d	file:
+cntrFunc	RobotControl.c	/^void cntrFunc(int nparam, int j, double *x, double *gj, void *cd) {$/;"	f
+colvec	cfsqp.c	/^static double *colvec(double **a,int col,int nrows)$/;"	f	file:
+complex	qld.c	/^typedef struct { real r, i; } complex;$/;"	t	typeref:struct:__anon1	file:
+constE	RobotControl.c	/^double constE;$/;"	v
+convert	cfsqp.c	/^convert(double **a,int m,int n)$/;"	f	file:
+cray	qld.c	311;"	d	file:
+csta	qld.c	/^	char *csta;$/;"	m	struct:__anon6	file:
+cunit	qld.c	/^	ftnint cunit;$/;"	m	struct:__anon6	file:
+d	qld.c	/^	doublereal d;$/;"	m	union:Multitype	file:
+d0_is0	cfsqp.c	/^	 int dlfeas,local,update,first,rhol_is1,d0_is0;$/;"	m	struct:__anon13	file:
+d1bind	cfsqp.c	/^        int d1bind;    \/* SR constraints  *\/$/;"	m	struct:_constraint	file:
+dabs	qld.c	268;"	d	file:
+dealloc	cfsqp.c	/^dealloc(int nineq,int neq,double *signeq,int *indxob,$/;"	f	file:
+dealloc1	cfsqp.c	/^dealloc1(int nparam,int nrowa,double **a,double **hess,double **hess1,$/;"	f	file:
+di1	cfsqp.c	/^di1(int nparam,int nqpram,int nob,int nobL,int nfsip,int nineqn,$/;"	f	file:
+diagnl	cfsqp.c	/^static void diagnl(int nrowa,double diag,double **a)$/;"	f	file:
+dims	qld.c	/^	Long *dims;$/;"	m	struct:Vardesc	file:
+dir	cfsqp.c	/^dir(int nparam,int nob,int nobL,int nfsip,int nineqn,int neq,int neqn,$/;"	f	file:
+dlfeas	cfsqp.c	/^	 int dlfeas,local,update,first,rhol_is1,d0_is0;$/;"	m	struct:__anon13	file:
+dmax	qld.c	272;"	d	file:
+dmin	qld.c	271;"	d	file:
+doublecomplex	qld.c	/^typedef struct { doublereal r, i; } doublecomplex;$/;"	t	typeref:struct:__anon2	file:
+doublereal	qld.c	/^typedef double doublereal;$/;"	t	file:
+dqp	cfsqp.c	/^dqp(int nparam,int nqpram,int nob,int nobL,int nfsip,int nineqn,$/;"	f	file:
+element	cfsqp.c	/^static int element(int *set,int length,int index)$/;"	f	file:
+eps	qld.c	/^    doublereal eps;$/;"	m	struct:__anon9	file:
+epsmac	cfsqp.c	/^	 double epsmac,rteps,udelta,valnom;$/;"	m	struct:__anon12	file:
+error	cfsqp.c	/^static void error(char string[],int *inform)$/;"	f	file:
+estlam	cfsqp.c	/^estlam(int nparam,int neqn,int *ifail,double bigbnd,double **hess,$/;"	f	file:
+first	cfsqp.c	/^	 int dlfeas,local,update,first,rhol_is1,d0_is0;$/;"	m	struct:__anon13	file:
+flag	qld.c	/^typedef long flag;$/;"	t	file:
+flag	qld.c	/^typedef short flag;$/;"	t	file:
+fool	cfsqp.c	/^static void fool(double x,double y,double *z)$/;"	f	file:
+free_dm	cfsqp.c	/^free_dm(double **m,int rows)$/;"	f	file:
+free_dv	cfsqp.c	/^free_dv(double *v)$/;"	f	file:
+free_iv	cfsqp.c	/^free_iv(int *v)$/;"	f	file:
+ftnint	qld.c	/^typedef long ftnint;$/;"	t	file:
+ftnint	qld.c	/^typedef short ftnint;$/;"	t	file:
+ftnlen	qld.c	/^typedef long ftnlen;$/;"	t	file:
+ftnlen	qld.c	/^typedef short ftnlen;$/;"	t	file:
+fuscmp	cfsqp.c	/^static int fuscmp(double val,double thrshd)$/;"	f	file:
+gLgeps	cfsqpusr.h	/^double gLgeps=-1.e0;$/;"	v
+gcos	qld.c	312;"	d	file:
+glob_grd	cfsqp.c	/^} glob_grd;$/;"	v	typeref:struct:__anon12
+glob_info	cfsqp.c	/^} glob_info;$/;"	v	typeref:struct:__anon10
+glob_log	cfsqp.c	/^} glob_log;$/;"	v	typeref:struct:__anon13
+glob_prnt	cfsqp.c	/^} glob_prnt;$/;"	v	typeref:struct:__anon11
+grad	cfsqp.c	/^	double *grad;$/;"	m	struct:_constraint	file:
+grad	cfsqp.c	/^	double *grad;$/;"	m	struct:_objective	file:
+grcnFunc	RobotControl.c	/^void grcnFunc(int nparam, int j, double *x, double *gradgj,$/;"	f
+grcnfd	cfsqp.c	/^void grcnfd(int nparam,int j,double *x,double *gradg,$/;"	f
+grobFunc	RobotControl.c	/^void grobFunc(int nparam, int j, double *x, double *gradfj,$/;"	f
+grobfd	cfsqp.c	/^void grobfd(int nparam,int j,double *x,double *gradf,$/;"	f
+h	qld.c	/^	shortint h;$/;"	m	union:Multitype	file:
+hessian	cfsqp.c	/^hessian(int nparam,int nob,int nfsip,int nobL,int nineqn,int neq,$/;"	f	file:
+i	qld.c	/^	integer i;$/;"	m	union:Multitype	file:
+i	qld.c	/^typedef struct { doublereal r, i; } doublecomplex;$/;"	m	struct:__anon2	file:
+i	qld.c	/^typedef struct { real r, i; } complex;$/;"	m	struct:__anon1	file:
+iciend	qld.c	/^	flag iciend;$/;"	m	struct:__anon4	file:
+icierr	qld.c	/^{	flag icierr;$/;"	m	struct:__anon4	file:
+icifmt	qld.c	/^	char *icifmt;$/;"	m	struct:__anon4	file:
+icilist	qld.c	/^} icilist;$/;"	t	typeref:struct:__anon4	file:
+icirlen	qld.c	/^	ftnint icirlen;$/;"	m	struct:__anon4	file:
+icirnum	qld.c	/^	ftnint icirnum;$/;"	m	struct:__anon4	file:
+iciunit	qld.c	/^	char *iciunit;$/;"	m	struct:__anon4	file:
+inacc	qld.c	/^	char	*inacc;$/;"	m	struct:__anon8	file:
+inacclen	qld.c	/^	ftnlen	inacclen;$/;"	m	struct:__anon8	file:
+inblank	qld.c	/^	char	*inblank;$/;"	m	struct:__anon8	file:
+inblanklen	qld.c	/^	ftnlen	inblanklen;$/;"	m	struct:__anon8	file:
+index	cfsqp.c	/^	int index;$/;"	m	struct:_violation	file:
+indexs	cfsqp.c	/^static int indexs(int i,int nfs)$/;"	f	file:
+indir	qld.c	/^	char 	*indir;$/;"	m	struct:__anon8	file:
+indirlen	qld.c	/^	ftnlen	indirlen;$/;"	m	struct:__anon8	file:
+inerr	qld.c	/^{	flag inerr;$/;"	m	struct:__anon8	file:
+inex	qld.c	/^	ftnint	*inex;	\/*parameters in standard's order*\/$/;"	m	struct:__anon8	file:
+infile	qld.c	/^	char *infile;$/;"	m	struct:__anon8	file:
+infilen	qld.c	/^	ftnlen infilen;$/;"	m	struct:__anon8	file:
+infmt	qld.c	/^	char	*infmt;$/;"	m	struct:__anon8	file:
+infmtlen	qld.c	/^	ftnlen	infmtlen;$/;"	m	struct:__anon8	file:
+info	cfsqp.c	/^	 int iprint,info,ipd,iter,initvl,iter_mod;$/;"	m	struct:__anon11	file:
+inform	qld.c	/^	char	*inform;$/;"	m	struct:__anon8	file:
+informlen	qld.c	/^	ftnint	informlen;$/;"	m	struct:__anon8	file:
+initpt	cfsqp.c	/^initpt(int nparam,int nnl,int neq,int neqn,int nclin,int nctotl,$/;"	f	file:
+initvl	cfsqp.c	/^	 int iprint,info,ipd,iter,initvl,iter_mod;$/;"	m	struct:__anon11	file:
+inlist	qld.c	/^} inlist;$/;"	t	typeref:struct:__anon8	file:
+inname	qld.c	/^	char	*inname;$/;"	m	struct:__anon8	file:
+innamed	qld.c	/^	ftnint	*innamed;$/;"	m	struct:__anon8	file:
+innamlen	qld.c	/^	ftnlen	innamlen;$/;"	m	struct:__anon8	file:
+innrec	qld.c	/^	ftnint	*innrec;$/;"	m	struct:__anon8	file:
+innum	qld.c	/^	ftnint	*innum;$/;"	m	struct:__anon8	file:
+inopen	qld.c	/^	ftnint	*inopen;$/;"	m	struct:__anon8	file:
+inrecl	qld.c	/^	ftnint	*inrecl;$/;"	m	struct:__anon8	file:
+inseq	qld.c	/^	char	*inseq;$/;"	m	struct:__anon8	file:
+inseqlen	qld.c	/^	ftnlen	inseqlen;$/;"	m	struct:__anon8	file:
+integer	qld.c	/^typedef int integer;$/;"	t	file:
+inunf	qld.c	/^	char	*inunf;$/;"	m	struct:__anon8	file:
+inunflen	qld.c	/^	ftnlen	inunflen;$/;"	m	struct:__anon8	file:
+inunit	qld.c	/^	ftnint inunit;$/;"	m	struct:__anon8	file:
+io	cfsqp.c	/^	 FILE *io;$/;"	m	struct:__anon11	file:
+ipd	cfsqp.c	/^	 int iprint,info,ipd,iter,initvl,iter_mod;$/;"	m	struct:__anon11	file:
+iprint	cfsqp.c	/^	 int iprint,info,ipd,iter,initvl,iter_mod;$/;"	m	struct:__anon11	file:
+iter	cfsqp.c	/^	 int iprint,info,ipd,iter,initvl,iter_mod;$/;"	m	struct:__anon11	file:
+iter_mod	cfsqp.c	/^	 int iprint,info,ipd,iter,initvl,iter_mod;$/;"	m	struct:__anon11	file:
+iw	cfsqp.c	/^int     *iw;$/;"	v
+leniw	cfsqp.c	/^int 	lenw, leniw;$/;"	v
+lenw	cfsqp.c	/^int 	lenw, leniw;$/;"	v
+local	cfsqp.c	/^	 int dlfeas,local,update,first,rhol_is1,d0_is0;$/;"	m	struct:__anon13	file:
+logical	qld.c	/^typedef long int logical;$/;"	t	file:
+main	RobotControl.c	/^int main(int argc, char *argv[]) {$/;"	f
+make_dm	cfsqp.c	/^make_dm(int rows, int cols)$/;"	f	file:
+make_dv	cfsqp.c	/^make_dv(int len)$/;"	f	file:
+make_iv	cfsqp.c	/^make_iv(int len)$/;"	f	file:
+matrcp	cfsqp.c	/^static void matrcp(int ndima,double **a,int ndimb,double **b)$/;"	f	file:
+matrvc	cfsqp.c	/^static void matrvc(int la,int na,double **a,double *x,double *y)$/;"	f	file:
+max	qld.c	270;"	d	file:
+maxit	cfsqp.c	/^int  nstop,maxit;$/;"	v
+mc68010	qld.c	313;"	d	file:
+mc68020	qld.c	314;"	d	file:
+min	qld.c	269;"	d	file:
+mips	qld.c	315;"	d	file:
+mode	cfsqp.c	/^	 int nnineq, M, ncallg, ncallf, mode, modec;$/;"	m	struct:__anon10	file:
+modec	cfsqp.c	/^	 int nnineq, M, ncallg, ncallf, mode, modec;$/;"	m	struct:__anon10	file:
+mult	cfsqp.c	/^	double *mult;$/;"	m	struct:_parameter	file:
+mult	cfsqp.c	/^	double mult;$/;"	m	struct:_constraint	file:
+mult	cfsqp.c	/^	double mult;$/;"	m	struct:_objective	file:
+mult_L	cfsqp.c	/^	double mult_L; \/* mode A=1 *\/$/;"	m	struct:_objective	file:
+name	qld.c	/^	char *name;$/;"	m	struct:Namelist	file:
+name	qld.c	/^	char *name;$/;"	m	struct:Vardesc	file:
+ncallf	cfsqp.c	/^	 int nnineq, M, ncallg, ncallf, mode, modec;$/;"	m	struct:__anon10	file:
+ncallg	cfsqp.c	/^	 int nnineq, M, ncallg, ncallf, mode, modec;$/;"	m	struct:__anon10	file:
+ncsipl	cfsqp.c	/^	 int tot_actf_sip,tot_actg_sip,nfsip,ncsipl,ncsipn; \/* SIP *\/$/;"	m	struct:__anon10	file:
+ncsipn	cfsqp.c	/^	 int tot_actf_sip,tot_actg_sip,nfsip,ncsipl,ncsipn; \/* SIP *\/$/;"	m	struct:__anon10	file:
+nfsip	cfsqp.c	/^	 int tot_actf_sip,tot_actg_sip,nfsip,ncsipl,ncsipn; \/* SIP *\/$/;"	m	struct:__anon10	file:
+nnineq	cfsqp.c	/^	 int nnineq, M, ncallg, ncallf, mode, modec;$/;"	m	struct:__anon10	file:
+nstop	cfsqp.c	/^int  nstop,maxit;$/;"	v
+nullvc	cfsqp.c	/^static void nullvc(int nparam,double *x)$/;"	f	file:
+numTasks	problem.h	/^    int numTasks;$/;"	m	struct:problemData
+nvars	qld.c	/^	int nvars;$/;"	m	struct:Namelist	file:
+oacc	qld.c	/^	char *oacc;$/;"	m	struct:__anon5	file:
+objFunc	RobotControl.c	/^void objFunc(int nparam, int j, double *x, double *fj, void *cd) {$/;"	f
+objeps	cfsqpusr.h	/^double objeps=-1.e0;$/;"	v
+objrep	cfsqpusr.h	/^double objrep=-1.e0;$/;"	v
+oblnk	qld.c	/^	char *oblnk;$/;"	m	struct:__anon5	file:
+oerr	qld.c	/^{	flag oerr;$/;"	m	struct:__anon5	file:
+ofm	qld.c	/^	char *ofm;$/;"	m	struct:__anon5	file:
+ofnm	qld.c	/^	char *ofnm;$/;"	m	struct:__anon5	file:
+ofnmlen	qld.c	/^	ftnlen ofnmlen;$/;"	m	struct:__anon5	file:
+olist	qld.c	/^} olist;$/;"	t	typeref:struct:__anon5	file:
+orl	qld.c	/^	ftnint orl;$/;"	m	struct:__anon5	file:
+osta	qld.c	/^	char *osta;$/;"	m	struct:__anon5	file:
+ounit	qld.c	/^	ftnint ounit;$/;"	m	struct:__anon5	file:
+out	cfsqp.c	/^out(int miter,int nparam,int nob,int nobL,int nfsip,int ncn,$/;"	f	file:
+p	RobotControl.h	/^struct problemData *p;$/;"	v	typeref:struct:problemData
+pdp11	qld.c	316;"	d	file:
+problemData	problem.h	/^struct problemData{$/;"	s
+ql0001_	qld.c	/^int ql0001_(int *m,int *me,int *mmax,int *n,int *nmax,int *mnn,$/;"	f
+ql0002_	qld.c	/^int ql0002_(integer *n,integer *m,integer *meq,integer *mmax,$/;"	f
+r	qld.c	/^	real r;$/;"	m	union:Multitype	file:
+r	qld.c	/^typedef struct { doublereal r, i; } doublecomplex;$/;"	m	struct:__anon2	file:
+r	qld.c	/^typedef struct { real r, i; } complex;$/;"	m	struct:__anon1	file:
+readFile	dataHandler.c	/^struct problemData *readFile(const char *fileName) {$/;"	f
+real	qld.c	/^typedef float real;$/;"	t	file:
+resign	cfsqp.c	/^resign(int n,int neqn,double *psf,double *grdpsf,double *penp,$/;"	f	file:
+rhol_is1	cfsqp.c	/^	 int dlfeas,local,update,first,rhol_is1,d0_is0;$/;"	m	struct:__anon13	file:
+rteps	cfsqp.c	/^	 double epsmac,rteps,udelta,valnom;$/;"	m	struct:__anon12	file:
+sbout1	cfsqp.c	/^sbout1(FILE *io,int n,char *s1,double z,double *z1,int job,int level)$/;"	f	file:
+sbout2	cfsqp.c	/^sbout2(FILE *io,int n,int i,char *s1,char *s2,double *z)$/;"	f	file:
+scaprd	cfsqp.c	/^static double scaprd(int n,double *x,double *y)$/;"	f	file:
+sgi	qld.c	317;"	d	file:
+shift	cfsqp.c	/^static void shift(int n,int ii,int *iact)$/;"	f	file:
+shortint	qld.c	/^typedef short int shortint;$/;"	t	file:
+shortlogical	qld.c	/^typedef short int shortlogical;$/;"	t	file:
+slope	cfsqp.c	/^slope(int nob,int nobL,int neqn,int nparam,int feasb,$/;"	f	file:
+small	cfsqp.c	/^static double small()$/;"	f	file:
+sparc	qld.c	318;"	d	file:
+step1	cfsqp.c	/^step1(int nparam,int nob,int nobL,int nfsip,int nineqn,int neq,int neqn,$/;"	f	file:
+sun	qld.c	319;"	d	file:
+sun2	qld.c	320;"	d	file:
+sun3	qld.c	321;"	d	file:
+sun4	qld.c	322;"	d	file:
+tolfea	cfsqp.c	/^double 	bgbnd,tolfea;$/;"	v
+tot_actf_sip	cfsqp.c	/^	 int tot_actf_sip,tot_actg_sip,nfsip,ncsipl,ncsipn; \/* SIP *\/$/;"	m	struct:__anon10	file:
+tot_actg_sip	cfsqp.c	/^	 int tot_actf_sip,tot_actg_sip,nfsip,ncsipl,ncsipn; \/* SIP *\/$/;"	m	struct:__anon10	file:
+type	cfsqp.c	/^	int type;$/;"	m	struct:_violation	file:
+type	qld.c	/^	int  type;$/;"	m	struct:Vardesc	file:
+u370	qld.c	323;"	d	file:
+u3b	qld.c	324;"	d	file:
+u3b2	qld.c	325;"	d	file:
+u3b5	qld.c	326;"	d	file:
+udelta	cfsqp.c	/^	 double epsmac,rteps,udelta,valnom;$/;"	m	struct:__anon12	file:
+unix	qld.c	327;"	d	file:
+update	cfsqp.c	/^	 int dlfeas,local,update,first,rhol_is1,d0_is0;$/;"	m	struct:__anon13	file:
+update_omega	cfsqp.c	/^update_omega(int nparam,int ncsipl,int ncsipn,int *mesh_pts,$/;"	f	file:
+val	cfsqp.c	/^	double val;$/;"	m	struct:_constraint	file:
+val	cfsqp.c	/^	double val;$/;"	m	struct:_objective	file:
+valnom	cfsqp.c	/^	 double epsmac,rteps,udelta,valnom;$/;"	m	struct:__anon12	file:
+vars	qld.c	/^	Vardesc **vars;$/;"	m	struct:Namelist	file:
+vax	qld.c	328;"	d	file:
+w	cfsqp.c	/^double	*w;$/;"	v
+x	cfsqp.c	/^	double *x;$/;"	m	struct:_parameter	file:
+x_is_new	cfsqpusr.h	/^int x_is_new=TRUE;$/;"	v
+z	qld.c	/^	doublecomplex z;$/;"	m	union:Multitype	file:

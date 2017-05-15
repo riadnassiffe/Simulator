@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<problema tasks="6">
+<X name="X">
+<variable >1.0</variable>
+<variable >1.0</variable>
+<variable >1.0</variable>
+<variable >1.0</variable>
+<variable >1.0</variable>
+<variable >1.0</variable>
+</X>
+<Fmin name="Fmin">
+<variable >-1.0</variable>
+<variable >-1.0</variable>
+<variable >-1.0</variable>
+<variable >-1.0</variable>
+<variable >-1.0</variable>
+<variable >-1.0</variable>
+</Fmin>
+<CI name="CI">
+<variable >20 </variable>
+<variable >50 </variable>
+<variable >30 </variable>
+<variable >20 </variable>
+<variable >30 </variable>
+<variable >60 </variable>
+</CI>
+<CdMax name="CdMax">
+<variable >80 </variable>
+<variable >150</variable>
+<variable >70 </variable>
+<variable >40 </variable>
+<variable >110</variable>
+<variable >190</variable>
+</CdMax>
+<CdMin name="CdMin">
+<variable >64 </variable>
+<variable >120</variable>
+<variable >56 </variable>
+<variable >32 </variable>
+<variable >88</variable>
+<variable >152</variable>
+</CdMin>
+<T name="T">
+<variable >1000</variable>
+<variable >1000</variable>
+<variable >1000</variable>
+<variable >1000</variable>
+<variable >1000</variable>
+<variable >1000</variable>
+</T>
+<Pi name="Pi">
+<variable >0.8</variable>
+<variable >0.0165</variable>
+<variable >0.462</variable>
+<variable >0.17</variable>
+<variable >0.9815</variable>
+<variable >0.1815</variable>
+</Pi>
+<W1 name="W1">
+<variable >70</variable>
+<variable >60</variable>
+<variable >5</variable>
+<variable >60</variable>
+<variable >40</variable>
+<variable >30</variable>
+</W1>
+<W2 name="W2">
+<variable >45</variable>
+<variable >35</variable>
+<variable >5</variable>
+<variable >90</variable>
+<variable >40</variable>
+<variable >40</variable>
+</W2>
+<C0 name="C0">
+<variable>0.69</variable>
+</C0>
+<B1 name="B1">
+<variable>1.00</variable>
+</B1>
+</problema>

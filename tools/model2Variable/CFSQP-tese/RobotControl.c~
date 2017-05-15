@@ -1,0 +1,281 @@
+	/*
+ * RobotControl.c
+ *
+ *  Created on: May 21, 2012
+ *      Author: Ríad Mattos Nassiffe
+ *     Problema a resolver:
+ *\begin{subequations}\label{pcm2}
+ *\begin{align}
+ *    P: \quad \min   ~& f=  \sum_{S_i \in \mathcal{S}}\Bigl( -\log(\frac{Q^{\rm I}_i e^{\overline{f_i}} \alpha_i}{T_{i}}) -\log(\frac{e^{\overline{Q^{\rm D}_i}} \alpha_i}{T_{i}  })\Bigl) \label{pcm2-eq:1} \\
+ *        {\rm s.a:}
+ *    & \sum_{S_i \in \mathcal{S}} \frac{e^{\overline{Q^{\rm D}_i}}}{T_{i}e^{\overline{f_i}}} \leq 1 -  \sum_{S_i \in \mathcal{S}} \frac{Q^{\rm I}_i}{T_{i}} \label{pcm2-eq:2} \\
+ *    &  \sum_{S_i\in \mathcal{S}}\Bigl( C_{\rm ef} V_{\max}^2 e^{2\overline{f_i}} F_{\max} \frac{e^{\overline{Q^{\rm D}_i}}}{T_{i}} + \nonumber \\
+ *    & \quad \quad C_{\rm ef} V_{\max}^2 e^{3\overline{f_i}} F_{\max}\frac{{Q^{\rm I}_i}}{T_{i}} + P^{\rm I}_{i} \frac{e^{\overline{Q^{\rm D}_i}}}{T_{i}e^{\overline{f_{i}}}} \Bigl)   \nonumber \\ 
+ *    & \quad \quad \quad \quad  \leq  \frac{E^\star}{T_{\rm est}} - P^{\rm S} - \sum_{S_i \in \mathcal{S}}  P^{\rm I}_{i} \frac{Q^{\rm I}_i}{T_{i}}\label{pcm2-eq:3}\\
+ *    & \log(f_{i}^{\rm min}) \leq  \overline{f_i} \leq \log(f^{\max}_i), S_i \in \mathcal{S}\label{pcm2-eq:4}\\
+ *    & \log(Q^{{\rm D},\min}_{i}) \leq  \overline{Q^{\rm D}_i} \leq \log(Q^{{\rm D},\max}_i), S_i \in \mathcal{S}\label{pcm2-eq:5}
+ * \end{align}
+ * \end{subequations
+ *     Características dos problema:
+ *     Contínuo
+ *     Todas restrições e a função objetivo são convexas
+ *     somente a frequência X pode ser ajustada
+ */
+
+#include "RobotControl.h"
+
+#define DEBUG_1
+
+int main(int argc, char *argv[]) {
+
+	int nparam, nf, nineq, neq, mode, iprint, miter, neqn, nineqn, ncsrl, ncsrn,
+			nfsr, mesh_pts[1], inform;
+	double bigbnd, eps, epsneq, udelta;
+	double *x, *f, *g, *lambda;
+	static double *bl = NULL;
+	static double *bu = NULL;
+	double cpuTime;
+	void *cd;
+
+
+   int numTasks;
+
+	int i = 0;
+	int instance;
+	if (argc < 3) {
+		printf("%d", argc);
+		printf("You must provide 12 argument\n");
+		exit(0);
+	} else {
+		//iprint - miter - number of tasks - initial solution x
+		iprint = atoi(argv[1]);
+		miter = atoi(argv[2]);
+		instance=atoi(argv[3]);
+        	numTasks=atoi(argv[4]);
+        	p = readFile(argv[5]);
+	}
+
+
+	nparam =2*numTasks ; /* number of free variables  */
+	nf = 1; /* number of objective functions */
+	nfsr = 0; /* # sequence related objectives */
+
+	nineqn = 2; /* # of nonlinear inequalities   */
+	nineq = 2; /* total number of nonlinear inequalities */
+
+	neqn = 0; /* # of nonlinear equality constraints */
+	neq = 0; /* total number of nonlinear equality constraints */
+
+	ncsrl = 0; /* number of sets of linear sequentially related
+	 constraints */
+	ncsrn = 0; /* number of sets of nonlinear sequentially related
+	 constraints */
+	mesh_pts[0] = 0; /* pointer to an array of integers of dimension
+	 max{1,nfsr + ncsrn + ncsrl } */
+
+	mode = 100;/* mode= CBA.
+	 A - probelm to be solved
+	 B - algorithm
+	 C - line search */
+
+	//iprint = 3; /* 0 - no informatio is displayed
+	// 1 - objective and constraint */
+
+	//miter = 500;/* maximum number of iterations */
+
+	bigbnd = 1.e10; /* plays the role of infinity */
+
+	eps = 1e-9; /* epsilon */
+
+	epsneq = eps; /* maximum violation of nonlinear equality
+	 constraints */
+	udelta = 0.e0; /* perturbation for approximating gradients */
+
+	/* lower bound vector */
+	bl = (double *) calloc(nparam, sizeof(double));
+
+	/* upper bound vector */
+	bu = (double *) calloc(nparam, sizeof(double));
+
+	/* initial solution */
+	x = (double *) calloc(nparam, sizeof(double));
+
+	/* vector for objective functions */
+	f = (double *) calloc(nf, sizeof(double));
+
+	/* value of constraints. */
+	g = (double *) calloc(nineq + neq, sizeof(double));
+
+	/* lagrange multipliers */
+	lambda = (double *) calloc(nineq + neq + nf + nparam, sizeof(double));
+
+	for (i = 0; i < numTasks; i++) {
+		bl[i] = p->Fmin[i];
+		bu[i] = log(1);
+        	bl[i+numTasks] = p->CdMin[i];
+        	bu[i+numTasks] = p->CdMax[i];
+		x[i]=p->x[i];
+		//x[i]=log((double)rand()/(double)RAND_MAX);		
+		x[i+numTasks]=p->x[i+numTasks];
+		//x[i+numTasks] = p->CdMin[i];
+    	}
+            
+	double obj=0;
+    obj=0;	
+	for (i = 0; i < numTasks; i++) {
+           obj=obj-(double)log(exp(x[i]))*p->W2[i] - log(exp(x[i+numTasks]))*p->W[i];        
+    }
+    printf("initial value of OBJ=%g \n",obj);
+	struct timespec startCpuTime, stopCpuTime;
+	clock_gettime(CLOCK_THREAD_CPUTIME_ID, &startCpuTime);
+
+
+	cfsqp(nparam, nf, nfsr, nineqn, nineq, neqn, neq, ncsrl, ncsrn, mesh_pts,
+			mode, iprint, miter, &inform, bigbnd, eps, epsneq, udelta, bl, bu,
+			x, f, g, lambda, objFunc, cntrFunc, grobFunc, /* grobFunc | grobfd*/
+			grcnFunc, /* grcnFunc | grcnfd*/
+			cd);
+
+	clock_gettime(CLOCK_THREAD_CPUTIME_ID, &stopCpuTime);
+
+	cpuTime =
+			((float) (stopCpuTime.tv_sec - startCpuTime.tv_sec)
+					+ (stopCpuTime.tv_nsec - startCpuTime.tv_nsec)
+							/ (float) 1000000000L);
+
+	printf("time(%d)= %f \n",instance, cpuTime);
+	//printf("CPU Utilization: %f \% \n", (cpuTime / 0.01));
+
+	double energyTotal=0;
+	double utilization=0;
+	double temp;
+
+	cntrFunc(nparam, 2, x, &energyTotal,cd); 
+	cntrFunc(nparam, 1, x, &utilization,cd); 
+
+	printf("energy(%d)=%g \n",instance, g[0]);
+	printf("cpu(%d)= %g \n",instance,g[1]);
+	for(i=0;i<numTasks;i++)
+	  printf("freq.append(%g) \n",instance,exp(x[i]));
+	 
+	for(i=0;i<numTasks;i++)
+      printf("cd.append(%g) \n",instance,exp(x[i+numTasks]));
+	 
+	
+      printf("inform(%d)=%d \n",instance,inform);
+    	printf("inform(%d)=%d \n",instance,inform);
+
+        obj=0;	
+	for (i = 0; i < numTasks; i++) {
+           obj=obj-(double)log(exp(x[i]))*p->W2[i] - log(exp(x[i+numTasks]))*p->W[i];        
+    }
+	
+
+    printf("Profit(%d)=%g \n",instance,obj);
+	free(p);
+	free(bl);
+	free(bu);
+	free(x);
+	free(f);
+	free(g)
+            ;
+	free(lambda);
+
+	return 0;
+}
+
+/*  computes the objective function
+ -------------------------------------------------------------------------*/
+void objFunc(int nparam, int j, double *x, double *fj, void *cd) {
+	int i,k;
+	*fj = 0;
+        k=nparam/2;
+	for (i = 0; i < k; i++) {
+		*fj = *fj - log(exp(x[i]))*p->W2[i] -log(exp(x[i+k]))*p->W[i];
+	}
+	printf("obj=%g,%d \n",*fj,j);
+	return;
+}
+
+/* computes gradient for the objective function
+ -------------------------------------------------------------------------*/
+void grobFunc(int nparam, int j, double *x, double *gradfj,
+		void (*dummy)(int, int, double *, double *, void *), void *cd) {
+                int i,k,y;
+                k=nparam/2;
+		for (i = 0; i < k; i++) {
+                    gradfj[i] =  -p->W2[i];
+                    gradfj[i+k] = -p->W[i];
+                }
+    return;
+}
+
+/* computes constraints
+ -------------------------------------------------------------------------*/
+void cntrFunc(int nparam, int j, double *x, double *gj, void *cd) {
+	int i,k;
+        k=nparam/2;
+	switch (j) {
+	case 1:
+		*gj = 0;
+		for (i = 0; i < k; i++) {
+			*gj = *gj + p->beta3[i] + exp(x[i+k]-x[i])/p->T[i];
+		}
+		*gj = *gj - p->B1;
+	
+        //printf("sum utilization = %g \n",*gj);
+        break;
+	case 2:
+		*gj = 0;
+		for (i = 0; i < k; i++) {
+			*gj = *gj
+					+ ((p->beta1[i]*exp(3*x[i])) + p->beta2[i] + p->C2*exp(p->C3*p->H))
+							* ((exp(x[i+k]-x[i]) / (p->T[i])) + (p->Ci[i]));
+		}
+		*gj = *gj - p->B2;
+		break;
+	default:
+		printf("j is different of 1 or 2");
+		break;
+	}
+	return;
+
+}
+
+/* computes gradient for constraints
+ -------------------------------------------------------------------------*/
+void grcnFunc(int nparam, int j, double *x, double *gradgj,
+		void (*dummy)(int, int, double *, double *, void *), void *cd) {
+
+	int i,k,y,m,indice;
+        k=nparam/2;
+	switch (j) {
+	case 1:
+            
+                for(i=0;i<k;i++){
+                    gradgj[i] = -exp(x[i+k]-x[i])/p->T[i];
+                    gradgj[i+k] = exp(x[i+k]-x[i])/p->T[i];
+
+                }
+		break;
+	case 2:
+
+                for(i=0;i<k;i++){
+                    gradgj[i] =  - p->beta9[i]*exp(x[i+k] - x[i]) 
+					             - p->beta10[i]*exp(p->C3*-p->H + x[k+i] - x[i]) 
+					             + p->beta11[i]*exp(3*x[i]) 
+						         + p->beta12[i]*exp(x[i+k] + 2*x[i]) 
+						         - p->beta13[i]*exp(x[i+k] - x[i]);
+
+                    gradgj[k+i] =  p->beta9[i]*exp(x[i+k] - x[i]) 
+						         + p->beta10[i]*exp(p->C3*p->H + x[i+k] - x[i])
+						         + p->beta15[i]*exp(x[i+k] + 2*x[i]) 
+						         + p->beta13[i]*exp(x[i+k] - x[i]);
+                }
+		break;
+	default:
+		printf("j is different of 1 or 2");
+		break;
+	}
+	return;
+}
