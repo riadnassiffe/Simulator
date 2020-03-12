@@ -154,7 +154,7 @@ poster==0.8.1
 powerline-status==2.5
 pp==1.6.5
 prompt-toolkit==1.0.8
-psutil==4.4.2
+psutil==5.6.6
 ptyprocess==0.5.1
 py==1.4.31
 pyasn1==0.1.9
