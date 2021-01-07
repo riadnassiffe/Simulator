@@ -109,7 +109,7 @@ libvirt-python==3.0.0
 linecache2==1.0.0
 linop==0.8.2
 lockfile==0.12.2
-lxml==3.5.0
+lxml==4.6.2
 lz4==0.8.2
 Mako==1.0.6
 MarkupSafe==0.23
