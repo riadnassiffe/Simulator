@@ -1,8 +1,8 @@
-from System import System
-from Job import Job
+from system import System
+from job import Job
 
-class Tarefa:
-    """Class Tarefa
+class Task:
+    """Class Task
     """
     # Attributes:
     tardness = None  # (int) 

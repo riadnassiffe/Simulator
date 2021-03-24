@@ -1,4 +1,4 @@
-from Tarefa import Tarefa
+from tarefa import Tarefa
 
 class Job:
     """Class Job
