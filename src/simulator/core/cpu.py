@@ -1,7 +1,7 @@
-from system import System
+from .system import System
 
-class CPU:
-    """Class CPU
+class Processor:
+    """Class Processor
     """
     # Attributes:
     id = None  # (int) 

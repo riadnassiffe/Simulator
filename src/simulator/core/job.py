@@ -1,4 +1,3 @@
-from tarefa import Tarefa
 
 class Job:
     """Class Job

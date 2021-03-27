@@ -1,35 +1,63 @@
-from system import System
-from job import Job
+from .system import System
+from .job import Job
+
+
+class IdGenerator:
+
+    def __init__(self):
+        self.id = 0
+
+    def next(self):
+        self.id += 1
+        return  self.id
 
 class Task:
     """Class Task
     """
-    # Attributes:
-    tardness = None  # (int) 
-    __id = None  # (int) 
-    __abort_on_miss = None  # (bool) 
-    __start_time = None  # (int) 
-    __end_time = None  # (int) 
-    __wcet = None  # (int) 
-    __deadline = None  # (int) 
-    __last_id = 0  # (int) 
-    __priority = 0  # (int) 
-    __job_list = []  # (Job) 
+    __last_id = IdGenerator()
     
     # Operations
-    def __init__(self, abort_on_miss, start_time = 0, end_time, wcet, deadline):
-        """function __init__
+    def __init__(self, abort_on_miss: bool, end_time: int,
+                 wcet: int, deadline: int, period: int, 
+                 start_time: int = 0):
+        """ Create a task.
         
-        abort_on_miss: bool
-        start_time: int
-        end_time: int
-        wcet: int
-        deadline: int
+        This method initialize a task object.
+
+        Parameters
+        ----------
         
-        returns 
+        :param abort_on_miss: This parameter indicates that the task will be 
+            aborted if loses deadline. (default is False)
+        :type abort_on_miss: bool 
+        start_time (int): (default is 0)
+
+        end_time (int):
+        
+        wcet (int):
+        
+        deadline (int):
+        
+        start_time (int): (default is 0)
+
+        period (int):
+
+        Raises
+        ------
+        IvalidParameter
+            If any parameter is invalid. 
         """
-        return None # should raise NotImplementedError()
-    
+        # Attributes:
+        self.__tardness = 0
+        self.__id = self.__last_id.next()
+        self.__abort_on_miss = abort_on_miss
+        self.__start_time = start_time
+        self.__end_time = None 
+        self.__wcet = None 
+        self.__deadline = deadline 
+        self.__job_list = [] 
+        self.__period = period
+
     def generate_job(self, ):
         """function generate_job
         
