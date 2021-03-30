@@ -4,10 +4,16 @@ version = "0.1.0"
 description = ""
 authors = ["Ríad Nassiffe <riad.nassiffe@gmail.com>"]
 
+[tool.poetry.scripts]
+simulator = "simulator.engine:main"
+
+
 [tool.poetry.dependencies]
 python = "^3.9"
+simpy = "^4.0.1"
 
 [tool.poetry.dev-dependencies]
+autopep8 = "^1.5.6"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
