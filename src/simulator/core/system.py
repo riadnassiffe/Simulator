@@ -1,21 +1,11 @@
-from .logger import Logger
+from componentes.logger import Logger
+from simpy
 
 class System:
     """Class System
     """
-    # Attributes:
-    temperature = None  # (int) 
-    task_list = None  # (list) 
-    cpu_list = None  # (list) 
-    devices_power = 0  # (int) 
-    name = None  # (string) 
-    reconfiguration = None  # (bool) 
-    total_power_consumption = None  # (int) 
-    log = None  # (Logger) 
-    scheluder = None  # (Scheluder) 
-    
     # Operations
-    def __init__(self, cpu_list, scheduler, temperature, name, ):
+    def __init__(self, scheduler, temperature, name):
         """function __init__
         
         cpu_list: list
@@ -26,13 +16,24 @@ class System:
         
         returns 
         """
-        return None # should raise NotImplementedError()
+        self.env = simpy.Environment()
+        self.temperature = temperature  # (int) 
+        self.task_list = []  # (list) 
+        self.cpu_list = []  # (list) 
+        self.devices_power = 0  # (int) 
+        self.name = None  # (string) 
+        self.reconfiguration = None  # (bool) 
+        self.total_power_consumption = None  # (int) 
+        self.log = None  # (Logger) 
+        self.scheluder = None  # (Scheluder) 
     
-    def run(self):
-        """function run
-        
-        returns 
-        """
+    def run(self, time=1):
+        #Creating resources for each processor
+        #the problem is that resources works with FIFO policy.
+        processors = simpy.Resource(self.env, capacity=len(self.cpu_list))  
+
+
+        self.env.run(until=time)
         return None # should raise NotImplementedError()
     
 
